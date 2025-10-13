@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera PWA</title>
+
+    <base href="pwa-ejemplo-pablo/">
+
+    <!-- vincular manifest  -->
+    <link rel="manifest" href="pwa-ejemplo-pablo/manifest.json">
+
+    <!-- color de la barra de navegador  -->
+    <meta name="theme_color" content="#2196f3"> 
+
+</head>
+<body>
+    <h1>Bienvenidos a mi PWA</h1>
+    <p>Se puede intalar como aplicacion en tu celular</p>
+    <button onclick="alert('Hola desde la PWA')">Click aquí</button>
+
+    <!-- Registrar el service worker -->
+    <script>
+        if ("serviceWorker" in navigator){
+            navigator.serviceWorker.register("sw.js")
+                .then(reg => console.log("Service Worker registrado"))
+                .catch(err => console.log("Error al registrar el Service Worker"))
+        }
+    </script>
+</body>
+</html>
