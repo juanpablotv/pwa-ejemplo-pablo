@@ -19,10 +19,15 @@
     <p>Se puede intalar como aplicacion en tu celular</p>
     <button onclick="alert('Hola desde la PWA')">Click aquí</button>
 
+    <ul>
+        <li><a href="pwa-ejemplo-pablo/index.html">Inicio</a></li>
+        <li><a href="pwa-ejemplo-pablo/index.html">Iniciar sesión</a></li>
+    </ul>
+
     <!-- Registrar el service worker -->
     <script>
         if ("serviceWorker" in navigator){
-            navigator.serviceWorker.register("sw.js")
+            navigator.serviceWorker.register("pwa-ejemplo-pablo/sw.js")
                 .then(reg => console.log("Service Worker registrado"))
                 .catch(err => console.log("Error al registrar el Service Worker"))
         }
