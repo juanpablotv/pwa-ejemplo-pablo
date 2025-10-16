@@ -1,11 +1,11 @@
 //Plantilla de un service Worker minimo
 
-const { cache } = require("react");
+import { cache } from "react";
 
 
 //1. Nombre del sw y los archivos a cachear
 const CACHE_NAME = "mi-cache";
-const BASE_PATH  = "MiPWA/";
+const BASE_PATH  = "pwa-ejemplo-pablo/";
 const urlsToCache = [
     `${BASE_PATH}index.html`,
     `${BASE_PATH}manifest.json`,
